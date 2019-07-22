@@ -38,6 +38,7 @@ function biggify(event) {
   don't need to put anything in the parentheses to tell it what to clear, just
   call it--it knows what to do!
   */
+  function clearList()
   
   // TODO: Find the input box the user is typing in and put the DOM node in a variable.
   // Make sure you're using the right selector!
