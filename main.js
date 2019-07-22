@@ -8,10 +8,10 @@ const nasafyButton = document.querySelector('');
 //When it's clicked, launch `biggify`.
 nasafyButton.onclick = nasafy;
 
-// TODO: Find the crazyify string button on our page.
+// TODO: Find the crazify string button on our page.
 const crazifyStringButton = document.querySelector('');
 //When it's clicked, launch `stringify`.
-crazifyStringButton.onclick = crazyify;
+crazifyStringButton.onclick = crazify;
 
 // TODO: Find the reverse string button on our page.
 const reverseStringButton = document.querySelector('');
@@ -22,6 +22,11 @@ reverseStringButton.onclick = reverse;
 const luckyNumbersButton = document.querySelector('');
 //When it's clicked, launch `luckify`.
 luckyNumbersButton.onclick = luckify;
+
+// TODO: Find the lucky numbers button on our page.
+const titleCaseButton = document.querySelector('');
+//When it's clicked, launch `titleify`.
+titleCaseButton.onclick = titleify;
 
 
 function biggify(event) {
@@ -37,7 +42,6 @@ function biggify(event) {
   // TODO: Find the input box the user is typing in and put the DOM node in a variable.
   // Make sure you're using the right selector!
   
-
   // TODO: Use the variable you saved in the above step to dive deeper into the
   // object and find the value the user has added there. Save it to a variable.
   
@@ -53,7 +57,9 @@ function biggify(event) {
   Essentially, you can use `printValue` the same way you would `console.log`,
   only it will write to the DOM instead of to the console.
   */
- 
+
+
+
   
   /*
   Stretch goal TODO:
@@ -63,7 +69,7 @@ function biggify(event) {
     experience to ask them to delete anything they've inputted previously before
     inputting something else.
   */
-   
+  
 }
 
 function nasafy(event) {
@@ -71,58 +77,44 @@ function nasafy(event) {
   event.preventDefault();
 
   /*
-  TODO: Call the function `clearList`, which we have defined for you. You
-  don't need to put anything in the parentheses to tell it what to clear, just
-  call it--it knows what to do!
+    TODO: Call the function `clearList`, which we have defined for you.
   */
 
   
   // TODO: Find the input box the user is typing in and put the DOM node in a variable.
-  // Make sure you're using the right selector!t
-  
 
+  
   // TODO: Use the variable you saved in the above step to dive deeper into the
   // object and find the value the user has added there. Save it to a variable.
-  
 
   /*
-    TODO: Print every value from the user's number down to (and including) 1. Then print "Blastoff!".
+    TODO: Print every value from the user's number down to (and including) the number 1. Then print "Blastoff!".
     
-    Use the pre-defined `printValue` function below to print out the result,
+    Use the pre-defined `printValue` function below to print out each line,
     giving it the value you want to print.
-    
-    Essentially, you can use `printValue` the same way you would `console.log`,
-    only it will write to the DOM instead of to the console.
   */
 
 
 
   /*
-  Stretch goal TODO:
-  Using the variable we saved above for the input box, clear its value.
-  
-  This is a very useful feature, as it's an annoying and unexpected user
-  experience to ask them to delete anything they've inputted previously before
-  inputting something else.
+    Stretch goal TODO:
+    Using the variable we saved above for the input box, clear its value.
   */
   
 }
 
-function crazyify(event) {
+function crazify(event) {
   // Make sure the page isn't reloaded when the user submits the form.
   event.preventDefault();
   
   /*
-  TODO: Call the function `clearList`, which we have defined for you. You
-  don't need to put anything in the parentheses to tell it what to clear, just
-  call it--it knows what to do!
+  TODO: Call the function `clearList`, which we have defined for you.
   */
 
- 
- // TODO: Find the input box the user is typing in and put the DOM node in a variable.
-  // Make sure you're using the right selector!t
   
+ // TODO: Find the input box the user is typing in and put the DOM node in a variable.
 
+  
   // TODO: Use the variable you saved in the above step to dive deeper into the
   // object and find the value the user has added there. Save it to a variable.
   
@@ -134,27 +126,21 @@ function crazyify(event) {
     
     Use the pre-defined `printValue` function below to print out result,
     giving it the value you want to print.
-    
-    Essentially, you can use `printValue` the same way you would `console.log`,
-    only it will write to the DOM instead of to the console.
   */
-
+  
 
   /*
     Stretch goal TODOS:
     * If you haven't already, make sure capitalized user inputs get crazified too. "BANANA" crazified should be "bAnAnA", not "BANANA"!
-    * Only count the characters that are in the alphabet when you're considering what to capitalize. Without this adjustment, "hey you" comes out as "hEy yOu", with the space "capitalized" (whatever that means!). Make it result in "hEy YoU" instead!
 
-    
+    * Only count the characters that are in the alphabet when you're considering what to capitalize. Without this adjustment, "hey you" comes out as "hEy yOu", with the space "capitalized" (whatever that means!). Make it result in "hEy YoU" instead!
   */
+
+
 
   /*
   Stretch goal TODO:
   Using the variable we saved above for the input box, clear its value.
-  
-  This is a very useful feature, as it's an annoying and unexpected user
-  experience to ask them to delete anything they've inputted previously before
-  inputting something else.
   */
   
 }
@@ -164,29 +150,20 @@ function reverse(event) {
   event.preventDefault();
   
   /*
-    TODO: Call the function `clearList`, which we have defined for you. You
-    don't need to put anything in the parentheses to tell it what to clear, just
-    call it--it knows what to do!
+    TODO: Call the function `clearList`, which we have defined for you.
   */
-  clearList();
   
   // TODO: Find the input box the user is typing in and put the DOM node in a variable.
-  // Make sure you're using the right selector!
 
 
   // TODO: Use the variable you saved in the above step to dive deeper into the
-  // object and find the value the user has added there. Make sure it's a
-  // number, not a string. Save it to a variable.
-
+  // object and find the value the user has added there. Save it to a variable.
 
   /*
     TODO: Print out the string, but in reverse. Do _not_ print out each character from the string individually; this would be pretty weird behavior when someone wants to see the reversed string of what they typed in!
     
     Use the pre-defined `printValue` function below to print out the result,
     giving it the value you want to print.
-    
-    Essentially, you can use `printValue` the same way you would `console.log`,
-    only it will write to the DOM instead of to the console.
 
     Guidelines: 
     * You will find solutions on the internet that involve using `split` to make the string into an array. This is _not_ the correct solution for this exercise! Besides being incredibly inefficient (although this is a matter of principle more than app speed), this solution would teach you nothing about how to iterate over strings--and probably nothing about iterating over arrays either, since we don't have the foundational knowledge of arrays yet.
@@ -200,10 +177,6 @@ function reverse(event) {
   /*
     Stretch goal TODO:
     Using the variable we saved above for the input box, clear its value.
-
-    This is a very useful feature, as it's an annoying and unexpected user
-    experience to ask them to delete anything they've inputted previously before
-    inputting something else.
   */
 
 }
@@ -213,16 +186,13 @@ function luckify(event) {
   event.preventDefault();
 
 /*
-  TODO: Call the function `clearList`, which we have defined for you. You
-  don't need to put anything in the parentheses to tell it what to clear, just
-  call it--it knows what to do!
+  TODO: Call the function `clearList`, which we have defined for you.
 */
 
   
   // TODO: Find the input box the user is typing in and put the DOM node in a variable.
-  // Make sure you're using the right selector!
-
   
+
   // TODO: Use the variable you saved in the above step to dive deeper into the
   // object and find the value the user has added there. Make sure it's a
   // number, not a string. Save it to a variable.
@@ -234,9 +204,6 @@ function luckify(event) {
 
     Use the pre-defined `printValue` function below to print out each line,
     giving it the value you want to print.
-    
-    Essentially, you can use `printValue` the same way you would `console.log`,
-    only it will write to the DOM instead of to the console.
   */
 
 
@@ -245,17 +212,51 @@ function luckify(event) {
 
     * Make sure that you don't give them the same lucky number more than once. There are a few possible solutions to this, but don't use arrays! We'll get there soon. NOTE: the luckify stretch goals are particularly hard ones, feel free to come back after doing other stretch goals first.
     * If you're preventing them getting the same number, but they type in, say, a 3, your browser will enter an infinite loop, as you can't get 5 numbers from 1-3 without repeating a number. But you _could_ have it simply exit the loop earlier if the user entered a lower number than 5.
-    * If you get a lucky number of 15, _some_ solutions to the above will prevent a 1 from coming afterwards, as it will consider the 1 digit in 15 as an instance of 1 having already occurred. (Feel free to test this with 19 as an input, as you'll get plenty of numbers with 1 digits in them, and you should still get a 1 after a number in the teens fairly often if your solution DOESN'T have this issue.) One solution to this involves the string method `padStart`... but feel free to find a different way!
+    * If you get a lucky number of 15, _some_ solutions to the above will prevent a 1 from coming afterwards, as it will consider the 1 digit in 15 as an instance of 1 having already occurred. (Feel free to test this with 19 as an input, and see if a number with a 1 digit is ever followed by a 1.) One solution to this involves the string method `padStart`... but feel free to find a different way!
   */
+
 
 
   /*
     Stretch goal TODO:
     Using the variable we saved above for the input box, clear its value.
+  */
 
-    This is a very useful feature, as it's an annoying and unexpected user
-    experience to ask them to delete anything they've inputted previously before
-    inputting something else.
+}
+
+function titleify(event) {
+  // Make sure the page isn't reloaded when the user submits the form.
+  event.preventDefault();
+
+/*
+  TODO: Call the function `clearList`, which we have defined for you.
+*/
+
+  
+  // TODO: Find the input box the user is typing in and put the DOM node in a variable.
+  
+  
+  // TODO: Use the variable you saved in the above step to dive deeper into the
+  // object and find the value the user has added there. Save it to a variable.
+
+
+
+  /*
+    TODO: Print out the title case version of the string the user inputted.
+
+    Use the pre-defined `printValue` function below to print out the result,
+    giving it the value you want to print.
+
+    What's title case? It's the case used for the title of a book or movie. If it's the first letter of a word, you use a capital letter. Otherwise, use lower case.
+
+    True title case keeps lower case for any word that's an article or preposition, but we're _definitely_ not asking that of you!
+  */
+
+
+
+  /*
+    Stretch goal TODO:
+    Using the variable we saved above for the input box, clear its value.
   */
 
 }
