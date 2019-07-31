@@ -1,30 +1,30 @@
 // TODO: Find the biggify numbers button on our page.
-const biggifyNumbersButton = document.querySelector('');
+const biggifyNumbersButton = document.querySelector('.big');
 //When it's clicked, launch `biggify`.
 biggifyNumbersButton.onclick = biggify;
 
 // TODO: Find the biggify numbers button on our page.
-const nasafyButton = document.querySelector('');
+const nasafyButton = document.querySelector('.blastoff');
 //When it's clicked, launch `biggify`.
 nasafyButton.onclick = nasafy;
 
 // TODO: Find the crazify string button on our page.
-const crazifyStringButton = document.querySelector('');
+const crazifyStringButton = document.querySelector('.crazy');
 //When it's clicked, launch `stringify`.
 crazifyStringButton.onclick = crazify;
 
 // TODO: Find the reverse string button on our page.
-const reverseStringButton = document.querySelector('');
+const reverseStringButton = document.querySelector('.reverse');
 //When it's clicked, launch `reverse`.
 reverseStringButton.onclick = reverse;
 
 // TODO: Find the lucky numbers button on our page.
-const luckyNumbersButton = document.querySelector('');
+const luckyNumbersButton = document.querySelector('.lucky');
 //When it's clicked, launch `luckify`.
 luckyNumbersButton.onclick = luckify;
 
 // TODO: Find the lucky numbers button on our page.
-const titleCaseButton = document.querySelector('');
+const titleCaseButton = document.querySelector('.titlec');
 //When it's clicked, launch `titleify`.
 titleCaseButton.onclick = titleify;
 
@@ -32,24 +32,19 @@ titleCaseButton.onclick = titleify;
 function biggify(event) {
   // Make sure the page isn't reloaded when the user submits the form.
   event.preventDefault();
-
-  /*
-  TODO: Call the function `clearList`, which we have defined for you. You
-  don't need to put anything in the parentheses to tell it what to clear, just
-  call it--it knows what to do!
-  */
-  function clearList()
+  clearList();
   
-  // TODO: Find the input box the user is typing in and put the DOM node in a variable.
-  // Make sure you're using the right selector!
+  let userInput = document.querySelector('#user-input').value;
   
   // TODO: Use the variable you saved in the above step to dive deeper into the
   // object and find the value the user has added there. Save it to a variable.
-  
+  let big = Number(userInput) + 9000;
+
+  printValue(big);
+
   
   /*
   TODO: Add 9000 to the user's number.
-  
   A hint: if this isn't working, it _might_ be because of the JavaScript type of the data coming in.
   
   Use the pre-defined `printValue` function below to print out the result,
@@ -78,23 +73,30 @@ function nasafy(event) {
   event.preventDefault();
 
   /*
-    TODO: Call the function `clearList`, which we have defined for you.
-  */
-
-  
-  // TODO: Find the input box the user is typing in and put the DOM node in a variable.
-
-  
-  // TODO: Use the variable you saved in the above step to dive deeper into the
-  // object and find the value the user has added there. Save it to a variable.
-
-  /*
     TODO: Print every value from the user's number down to (and including) the number 1. Then print "Blastoff!".
     
     Use the pre-defined `printValue` function below to print out each line,
     giving it the value you want to print.
   */
+  clearList();
 
+  let userInput = document.querySelector('#user-input').value;
+  
+  // TODO: Use the variable you saved in the above step to dive deeper into the
+  // object and find the value the user has added there. Save it to a variable.
+  let num = Number(userInput);
+  counter = num;
+  while (counter >= 1) {
+    console.log(counter);
+    printValue(counter);
+    counter = counter - 1;
+  }
+ if (counter == 0) {
+   console.log('blastoff');
+   printValue('blastoff');
+ 
+ }
+  // printValue(blastoff);
 
 
   /*
@@ -104,22 +106,32 @@ function nasafy(event) {
   
 }
 
+
+
+
+
 function crazify(event) {
   // Make sure the page isn't reloaded when the user submits the form.
   event.preventDefault();
-  
+  }
   /*
   TODO: Call the function `clearList`, which we have defined for you.
   */
-
+  clearList()
   
  // TODO: Find the input box the user is typing in and put the DOM node in a variable.
-
+  let userInput = document.querySelector('.user-input').value;
   
   // TODO: Use the variable you saved in the above step to dive deeper into the
   // object and find the value the user has added there. Save it to a variable.
+  let words = userInput.value;
   
+  const nameCapitalized = words.charAt(0).toUpperCase() + words.slice(1);
 
+printValue(nameCapitalized);
+
+
+  
   /*
     TODO: Loop through and capitalize every even-numbered character. That is, if the user's string is 7 characters long, the 2nd, 4th, and 6th characters should all be capitalized.
     
@@ -144,34 +156,38 @@ function crazify(event) {
   Using the variable we saved above for the input box, clear its value.
   */
   
-}
+
   
 function reverse(event) {
   // Make sure the page isn't reloaded when the user submits the form.
   event.preventDefault();
-  
+ 
   /*
     TODO: Call the function `clearList`, which we have defined for you.
   */
-  
+  clearList()
   // TODO: Find the input box the user is typing in and put the DOM node in a variable.
-
-
+  let userInput = document.querySelector('.user-input');
+  
   // TODO: Use the variable you saved in the above step to dive deeper into the
   // object and find the value the user has added there. Save it to a variable.
-
+  let reverseValue = userInput.value;
   /*
     TODO: Print out the string, but in reverse. Do _not_ print out each character from the string individually; this would be pretty weird behavior when someone wants to see the reversed string of what they typed in!
-    
     Use the pre-defined `printValue` function below to print out the result,
     giving it the value you want to print.
 
     Guidelines: 
     * You will find solutions on the internet that involve using `split` to make the string into an array. This is _not_ the correct solution for this exercise! Besides being incredibly inefficient (although this is a matter of principle more than app speed), this solution would teach you nothing about how to iterate over strings--and probably nothing about iterating over arrays either, since we don't have the foundational knowledge of arrays yet.
     * To get a complete string, we'll have to build a new string entirely.
-    * It would probably _not_ make sense to go through the user input string in regular, 0 to sring.length order.
+    * It would probably _not_ make sense to go through the user input string in regular, 0 to string.length order.
       
   */
+  let reverseStr = '';
+  for (i = userInput.length - 1; i >= 0; i--) {
+    reverseStr += userInput[i];
+  }
+  printValue(userInput);
 
 
 
@@ -189,16 +205,16 @@ function luckify(event) {
 /*
   TODO: Call the function `clearList`, which we have defined for you.
 */
-
+  clearList();
   
   // TODO: Find the input box the user is typing in and put the DOM node in a variable.
   
-
+  let unluckyInput = document.querySelector('.user-input');
   // TODO: Use the variable you saved in the above step to dive deeper into the
   // object and find the value the user has added there. Make sure it's a
   // number, not a string. Save it to a variable.
 
-
+  let luckValue = unluckyInput.value;
 
   /*
     TODO: Print out 5 "lucky numbers" (random integers) from 1 to the number they typed in.
@@ -253,6 +269,9 @@ function titleify(event) {
     True title case keeps lower case for any word that's an article or preposition, but we're _definitely_ not asking that of you!
   */
 
+  let userInput = '';
+  console.log(userInput.toUpperCase());
+
 
 
   /*
@@ -287,3 +306,4 @@ function clearList() {
     current = document.querySelector('.list > li');
   }
 }
+
